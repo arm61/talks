@@ -4,7 +4,7 @@
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-	<title>pycon18</title>
+	<title>fitoog</title>
 
   <!-- Reveal themes -->
   <link rel="stylesheet" href="./example_files/reveal.css">
@@ -56,13 +56,13 @@
 						<div class="description">
 							<a href="https://sas2018.anl.gov">SAS2018</a> &mdash; 2018/10/12
 							<br>
-							DOI: <a href="https://doi.org/10.6084/m9.figshare.7092167">10.6084/m9.figshare.7092167</a>
+							DOI: <a href="https://doi.org/10.6084/m9.figshare.7150823">10.6084/m9.figshare.7150823</a>
 						</div>
 					</div>
 					<div class="credit">
 						<hr>
 						<div class="name"><a href="http://arm61.github.io">Andrew R. McCluskey</a></div>
-						<div class="label">PhD Student/Tutor/Demonstrator @ Uni Bath/Diamond Light Source</div>
+						<div class="label">Uni Bath/Diamond Light Source</div>
 						<div class="label"><a href="mailto:arm61@bath.ac.uk"><i class="fas fa-at social_icon"></i><span> arm61@bath.ac.uk</span></a></div>
 						<div class="label"><a href="https://twitter.com/an_drewmcc"><i class="fab fa-twitter social_icon"></i><span> an_drewmcc</span></a></div>
 					</div>
@@ -82,7 +82,7 @@
 					</div>
 					<div class="content">
 						<center>
-							<h1>chemists aren't usually taught to program</h1>
+							<h1>micellisation is tough to simulate</h1>
 						</center>
 					</div>
 				</div>
@@ -97,7 +97,7 @@
 					</div>
 					<div class="content">
 						<figure class="display">
-							<img src="./figures/chem.gif" alt="" width="100%">
+							<img src="./figures/micelle.png" alt="" width="100%">
 						</figure>
 					</div>
 				</div>
@@ -112,7 +112,8 @@
 					</div>
 					<div class="content">
 						<figure class="display">
-							<img src="./figures/chem1.gif" alt="" width="100%">
+							<img src="./figures/micellie_surface.png" alt="" width="100%">
+							<i>not a real potential energy surface</i>
 						</figure>
 					</div>
 				</div>
@@ -126,9 +127,17 @@
 						</div>
 					</div>
 					<div class="content">
-						<figure class="display">
-							<img src="./figures/notchem.gif" alt="" width="100%">
-						</figure>
+						<h1>difficult to get realistic micelles without <i>apriori</i> information</h1>
+						<ul>
+							<li>
+								easy to underestimate micelle size; <a href="http://doi.org/10.1016/j.theochem.2009.09.054">10.1016/j.theochem.2009.09.054</a>
+							</li>
+							<li>
+								get <i>N<sub>agg</sub></i> from Guinier analysis; <a href="http://doi.org/10.1002/anie.201713303">10.1002/anie.201713303</a>
+							</li>
+							<li>
+								run a few simulations at different <i>N<sub>agg</sub></i> pick the best agreement; <a href="http://doi.org/10.1002/anie.201713303">10.1002/anie.201713303</a>
+						</ul>
 					</div>
 				</div>
 			</section>
@@ -141,64 +150,118 @@
 						</div>
 					</div>
 					<div class="content">
-						<h1>chemists do data analysis</h1>
-						<figure class="display">
-							<a href="https://mybinder.org/v2/gh/arm61/talks/master?filepath=pycon_sept2018/plots.ipynb"><img src="./figures/chem_data.png" alt="" width="100%"></a>
-							<small>Source: Google Scholar searches</small>
-						</figure>
+						<h1>let's treat it like an optimisation problem</h1>
+						<ul>
+							<li>
+								move the surfactants to optimise agreement with scattering profile
+							</li>
+							<li>
+								micelles are an ensemble structure, perfect for a population approach
+							</li>
+							<li>
+								population based optimisation algorithms are trivially parallelised
+							</li>
+						</ul>
 					</div>
 				</div>
 			</section>
-
-			<section class="color--grad-white past" id="" style="display: block;">
-				<div class="grid-wrapper">
-					<div class="header">
-						<div class="twitterwhite">
-							<a href="https://twitter.com/an_drewmcc"><i class="fab fa-twitter"></i> <span>an_drewmcc</span></a>
-						</div>
-					</div>
-					<div class="content">
-						<h1>many chemists use python</h1>
-						<figure class="display">
-							<a href="https://mybinder.org/v2/gh/arm61/talks/master?filepath=pycon_sept2018/plots.ipynb"><img src="./figures/chem_data_py.png" alt="" width="100%"></a>
-							<small>Source: Google Scholar searches</small>
-						</figure>
-					</div>
-				</div>
-			</section>
-
-			<section class="color--grad-white past" id="" style="display: block;">
-				<div class="grid-wrapper">
-					<div class="header">
-						<div class="twitterwhite">
-							<a href="https://twitter.com/an_drewmcc"><i class="fab fa-twitter"></i> <span>an_drewmcc</span></a>
-						</div>
-					</div>
-					<div class="content">
-						<figure class="display">
-							<img src="./figures/rsc.png" alt="" width="100%">
-						</figure>
-					</div>
-				</div>
-			</section>
-
-			<section class="color--grad-white past" id="" style="display: block;">
-				<div class="grid-wrapper">
-					<div class="header">
-						<div class="twitterwhite">
-							<a href="https://twitter.com/an_drewmcc"><i class="fab fa-twitter"></i> <span>an_drewmcc</span></a>
-						</div>
-					</div>
-					<div class="content">
-						<figure class="display">
-							<img src="./figures/angry.gif" alt="" width="100%">
-						</figure>
-					</div>
-				</div>
-			</section>
-
 		</section>
 
+		<section class="stack present" style="display: block;" data-previous-indexv="0">
+			<section class="color--grad-green past" id="" style="display: block;" hidden="" aria-hidden="true">
+				<div class="grid-wrapper">
+					<div class="header">
+						<div class="twitterwhite">
+							<a href="https://twitter.com/an_drewmcc"><i class="fab fa-twitter"></i> <span>an_drewmcc</span></a>
+						</div>
+					</div>
+					<div class="content">
+						<center>
+							<h1>what are we optimising?</h1>
+						</center>
+					</div>
+				</div>
+			</section>
+
+			<section class="color--grad-white past" id="" style="display: block;">
+				<div class="grid-wrapper">
+					<div class="header">
+						<div class="twitterwhite">
+							<a href="https://twitter.com/an_drewmcc"><i class="fab fa-twitter"></i> <span>an_drewmcc</span></a>
+						</div>
+					</div>
+					<div class="content">
+						<h1>ctab</h1>
+						single tailed surfactant nearly has <i>C<sub>&infin;v</sub></i> symmetry
+						<ul>
+							<li>
+								can describe the system with 5 numbers per molecule
+							</li>
+							<li>
+								three positional, two angular
+							</li>
+						</ul>
+						<figure class="display">
+							<img src="./figures/moles.png" alt="" width="50%">
+						</figure>
+					</div>
+				</div>
+			</section>
+		</section>
+
+
+		<!-- Python use in tutorials -->
+		<section class="stack present" style="display: block;" data-previous-indexv="0">
+			<section class="color--grad-purple past" id="" style="display: block;" hidden="" aria-hidden="true">
+				<div class="grid-wrapper">
+					<div class="header">
+						<div class="twitterwhite">
+							<a href="https://twitter.com/an_drewmcc"><i class="fab fa-twitter"></i> <span>an_drewmcc</span></a>
+						</div>
+					</div>
+					<div class="content">
+						<center>
+						<h1>particle swarm algorithm</h1>
+					</center>
+					</div>
+				</div>
+			</section>
+
+			<section class="color--grad-white past" id="" style="display: block;">
+				<div class="grid-wrapper">
+					<div class="header">
+						<div class="twitterwhite">
+							<a href="https://twitter.com/an_drewmcc"><i class="fab fa-twitter"></i> <span>an_drewmcc</span></a>
+						</div>
+					</div>
+					<div class="content">
+						<ul><li>each particle has knowledge of the personal best (within that member of the population) position and the global best position</li></ul><br><br>
+						<center>
+							<img src="./figures/equ1.png" alt="" width="100%"><br><br>
+							<img src="./figures/equ2.png" alt="" width="25%">
+						</center><br>
+						<ul><li>apparently good for high dimensionality problems</li>
+					</div>
+				</div>
+			</section>
+
+			<section class="color--grad-white past" id="" style="display: block;">
+				<div class="grid-wrapper">
+					<div class="header">
+						<div class="twitterwhite">
+							<a href="https://twitter.com/an_drewmcc"><i class="fab fa-twitter"></i> <span>an_drewmcc</span></a>
+						</div>
+					</div>
+					<div class="content">
+						<figure class="display">
+							<img src="./figures/psa.gif" alt="sadie baby" width="100%">
+							<i>shamelessly stolen from wikipedia</i><br>
+							<small>By <a href="//commons.wikimedia.org/w/index.php?title=User:Ephramac&amp;action=edit&amp;redlink=1" class="new" title="User:Ephramac (page does not exist)">Ephramac</a> - <span class="int-own-work" lang="en">Own work</span>, <a href="https://creativecommons.org/licenses/by-sa/4.0" title="Creative Commons Attribution-Share Alike 4.0">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=54975083">Link</a></small>
+						</figure>
+					</div>
+				</div>
+			</section>
+		</section>
 
 		<!-- Python use in tutorials -->
 		<section class="stack present" style="display: block;" data-previous-indexv="0">
@@ -210,13 +273,61 @@
 						</div>
 					</div>
 					<div class="content">
-						<h1>pythoninchemistry project</h1>
+						<center>
+						<h1>fitoog</h1>
+					</center>
+					</div>
+				</div>
+			</section>
+
+			<section class="color--grad-white past" id="" style="display: block;">
+				<div class="grid-wrapper">
+					<div class="header">
+						<div class="twitterwhite">
+							<a href="https://twitter.com/an_drewmcc"><i class="fab fa-twitter"></i> <span>an_drewmcc</span></a>
+						</div>
+					</div>
+					<div class="content">
+						<h1>fitoog</h1>
 						<ul>
-							<li>Started by <a href="http://www.analysisandsynthesis.com/">Ben Morgan</a> and <a href="https://researchportal.bath.ac.uk/en/persons/fiona-dickinson/">Fiona Dickinson</a></li>
-							<li>Introducing python to chemistry labs and tutorials</li>
-							<li>Open-source chemistry teaching <a href="http://pythoninchemistry.org/pylj/">tools</a></li>
-							<li>The <a href="http://pythoninchemistry.org">pythoninchemistry.org</a> webpage</li>
-						</ul>
+							<li>fitoog is an open-source C_MPI code for applying a particle swarm algorithm fitting SAS data to atomistic/coarse-grained molecular models</li>
+							<li>runs a short energy minimisation using MARTINI force field parameters at each stage</li>
+							<li><a href="https://github.com/arm61/fitoog">github.com/arm61/fitoog</a></li>
+							</ul>
+					</div>
+				</div>
+			</section>
+
+			<section class="color--grad-white past" id="" style="display: block;">
+				<div class="grid-wrapper">
+					<div class="header">
+						<div class="twitterwhite">
+							<a href="https://twitter.com/an_drewmcc"><i class="fab fa-twitter"></i> <span>an_drewmcc</span></a>
+						</div>
+					</div>
+					<div class="content">
+						<h1>strong scaling</h1>
+						<figure class="display">
+							<img src="./figures/strong_scaling.png" alt="sadie baby" width="90%"><br>
+							<i>each node has 20 cores</i>
+						</figure>
+					</div>
+				</div>
+			</section>
+
+			<section class="color--grad-white past" id="" style="display: block;">
+				<div class="grid-wrapper">
+					<div class="header">
+						<div class="twitterwhite">
+							<a href="https://twitter.com/an_drewmcc"><i class="fab fa-twitter"></i> <span>an_drewmcc</span></a>
+						</div>
+					</div>
+					<div class="content">
+						<h1>weak scaling</h1>
+						<figure class="display">
+							<img src="./figures/weak_scaling.png" alt="sadie baby" width="90%"><br>
+							<i>each node has 20 cores</i>
+						</figure>
 					</div>
 				</div>
 			</section>
@@ -231,81 +342,14 @@
 						</div>
 					</div>
 					<div class="content">
-						<h1>pythoninlabs</h1>
-						<ul>
-							<li>Students used to have one Excel data analysis lab</li>
-							<li>Now <b>two</b> python labs in each of first and second year</li>
-						</ul>
+						<center>
+						<h1>testing</h1>
+					</center>
 					</div>
 				</div>
 			</section>
 
 			<section class="color--grad-white past" id="" style="display: block;">
-				<div class="grid-wrapper">
-					<div class="header">
-						<div class="twitterblue">
-							<a href="https://twitter.com/an_drewmcc"><i class="fab fa-twitter"></i> <span>an_drewmcc</span></a>
-						</div>
-					</div>
-					<div class="content">
-						<figure class="display">
-							<a href="http://pythoninchemistry.org/getting-started/"><img src="./figures/001-72.png" alt="" width="100%"></a>
-						</figure>
-					</div>
-				</div>
-			</section>
-
-			<section class="color--grad-white past" id="" style="display: block;">
-				<div class="grid-wrapper">
-					<div class="header">
-						<div class="twitterblue">
-							<a href="https://twitter.com/an_drewmcc"><i class="fab fa-twitter"></i> <span>an_drewmcc</span></a>
-						</div>
-					</div>
-					<div class="content">
-						<h1>pythoninlabs</h1>
-						<ul>
-							<li>In the process of open-sourcing all labs</li>
-							<li>Available will be at <a href="http://pythoninchemistry.org">pythoninchemistry.org</a></li>
-							<li><a href="http://jose.theoj.org/about"><i>Journal of Open Source Education</i></a> paper coming soon</li>
-						</ul>
-					</div>
-				</div>
-			</section>
-
-			<section class="color--grad-white past" id="" style="display: block;">
-				<div class="grid-wrapper">
-					<div class="header">
-						<div class="twitterblue">
-							<a href="https://twitter.com/an_drewmcc"><i class="fab fa-twitter"></i> <span>an_drewmcc</span></a>
-						</div>
-					</div>
-					<div class="content">
-						<figure class="display">
-							<img src="./figures/why.gif" alt="" width="100%">
-						</figure>
-					</div>
-				</div>
-			</section>
-
-		<section class="color--grad-white past" id="" style="display: block;">
-			<div class="grid-wrapper">
-				<div class="header">
-					<div class="twitterblue">
-						<a href="https://twitter.com/an_drewmcc"><i class="fab fa-twitter"></i> <span>an_drewmcc</span></a>
-					</div>
-				</div>
-				<div class="content">
-					<figure class="display">
-						<img src="./figures/feedback.png" alt="" width="100%">
-					</figure>
-				</div>
-			</div>
-		</section>
-	</section>
-
-		<section class="stack present" style="display: block;" data-previous-indexv="0">
-			<section class="color--grad-green past" id="" style="display: block;" hidden="" aria-hidden="true">
 				<div class="grid-wrapper">
 					<div class="header">
 						<div class="twitterwhite">
@@ -313,77 +357,22 @@
 						</div>
 					</div>
 					<div class="content">
-						<h1>pythonintutorials</h1>
+						<h1>is it good?</h1>
 						<ul>
 							<li>
-								Physical chemistry is often <a href="https://eic.rsc.org/feature/take-it-easy-on-the-equations-let-me-explain-/3009025.article">mathematically intensive</a>
+								use fitoog to fit some "test data"
 							</li>
+							<li>fifty CTAB molecules in a box</li>
+							<li>background subtracted SANS data</li>
 							<li>
-								Programming requires the educator to be explicit about the mathematical process
-							</li>
-							<li>
-								<a href="http://jupyter.org/">Jupyter notebooks</a> provide an user-friendly environment
-							</li>
-							<li>
-								Students can access the notebook online via <a href="https://mybinder.org/">MyBinder</a>
-							</li>
-						</ul>
+								ten independent calcs, running on 16 nodes, population size 10240, number of steps 4000</li>
+							</ul>
 					</div>
 				</div>
 			</section>
+
 
 			<section class="color--grad-white past" id="" style="display: block;">
-				<div class="grid-wrapper">
-					<div class="header">
-						<div class="twitterblue">
-							<a href="https://twitter.com/an_drewmcc"><i class="fab fa-twitter"></i> <span>an_drewmcc</span></a>
-						</div>
-					</div>
-					<div class="content">
-						<h1><a href="https://mybinder.org/v2/gh/arm61/talks/master?filepath=pycon_sept2018/tutorial_example.ipynb" target="_blank">example</a></h1>
-					</div>
-				</div>
-			</section>
-
-			<section class="color--grad-white past" id="" style="display: block;">
-				<div class="grid-wrapper">
-					<div class="header">
-						<div class="twitterblue">
-							<a href="https://twitter.com/an_drewmcc"><i class="fab fa-twitter"></i> <span>an_drewmcc</span></a>
-						</div>
-					</div>
-					<div class="content">
-						<h1>informal feedback</h1>
-						<ul>
-							<li>
-								Students appear anecdotally engaged during tutorials
-							</li>
-							<li>
-								Tutorial student attached modified notebooks to help emails
-							</li>
-						</ul>
-					</div>
-				</div>
-			</section>
-
-			<section class="color--grad-white past" id="" style="display: block;">
-				<div class="grid-wrapper">
-					<div class="header">
-						<div class="twitterblue">
-							<a href="https://twitter.com/an_drewmcc"><i class="fab fa-twitter"></i> <span>an_drewmcc</span></a>
-						</div>
-					</div>
-					<div class="content">
-						<figure class="display">
-							<img src="./figures/happy.gif" alt="" width="100%">
-						</figure>
-					</div>
-				</div>
-			</section>
-		</section>
-
-		<section class="stack present" style="display: block;" data-previous-indexv="0">
-			<section class="color--grad-green past" id="" style="display: block;" hidden="" aria-hidden="true">
 				<div class="grid-wrapper">
 					<div class="header">
 						<div class="twitterwhite">
@@ -391,118 +380,16 @@
 						</div>
 					</div>
 					<div class="content">
-						<h1>open source tools</h1>
-						<ul>
-							<li>Bath Chemistry uniquely has dedicated computional chemistry labs</li>
-							<li>Needed a tool to introduce <a href="https://en.wikipedia.org/wiki/Molecular_dynamics">molecular dynamics</a>/<a href="https://en.wikipedia.org/wiki/Monte_Carlo_method_in_statistical_physics">Monte Carlo</a> simulation</li>
-						</ul>
-					</div>
-				</div>
-			</section>
-
-			<section class="color--grad-white past" id="" style="display: block;">
-				<div class="grid-wrapper">
-					<div class="header">
-						<div class="twitterblue">
-							<a href="https://twitter.com/an_drewmcc"><i class="fab fa-twitter"></i> <span>an_drewmcc</span></a>
-						</div>
-					</div>
-					<div class="content">
-						<h1>time for some chemistry</h1>
+						<h1>Random numbers</h1>
 						<figure class="display">
-							<img src="./figures/fear.gif" alt="" width="100%">
+							<img src="./figures/fitoog_rand2.png" alt="sadie baby" width="90%"><br>
+							<i>acceptance probability 0.11 %</i>
 						</figure>
 					</div>
 				</div>
 			</section>
 
 			<section class="color--grad-white past" id="" style="display: block;">
-				<div class="grid-wrapper">
-					<div class="header">
-						<div class="twitterblue">
-							<a href="https://twitter.com/an_drewmcc"><i class="fab fa-twitter"></i> <span>an_drewmcc</span></a>
-						</div>
-					</div>
-					<div class="content">
-						<h1>chemistry background</h1>
-						<ul>
-							<li>
-								<a href="https://en.wikipedia.org/wiki/Molecular_dynamics">Molecular dynamics</a> is a technique used to computationally probe the structure of a material
-							</li>
-							<li>
-								This involves using classical motion equations to simulate atoms at a given temperature
-							</li>
-						</ul>
-						<br />
-						<br />
-						<figure class="display">
-							<img src="./figures/gls.png" alt="" width="100%">
-						</figure>
-					</div>
-				</div>
-			</section>
-
-			<section class="color--grad-white past" id="" style="display: block;">
-				<div class="grid-wrapper">
-					<div class="header">
-						<div class="twitterblue">
-							<a href="https://twitter.com/an_drewmcc"><i class="fab fa-twitter"></i> <span>an_drewmcc</span></a>
-						</div>
-					</div>
-					<div class="content">
-						<h1>pylj</h1>
-						<ul>
-							<li>
-								Open-source, python library to engage students in atomistic simulation
-							</li>
-							<li>MIT Licence; source code available on <a href="https://github.com/arm61/pylj">GitHub <i class="fab fa-github"></i></a>
-							<li>Paper in <a href="http://jose.theoj.org/papers/58daa1a1a564dc8e0f99ffcdae20eb1d"><i>Journal of Open-Source Education</i>, 1(2), 19. DOI: 10.21105/jose.00019</a></li>
-							<li>Bath physics PDRA <b>forked</b> it to make pysing</b></li>
-						</ul>
-						<br />
-						<br />
-						<figure class="display">
-							<img src="./figures/pylj_paper.png" alt="" width="100%">
-						</figure>
-					</div>
-				</div>
-			</section>
-
-			<section class="color--grad-white past" id="" style="display: block;">
-				<div class="grid-wrapper">
-					<div class="header">
-						<div class="twitterblue">
-							<a href="https://twitter.com/an_drewmcc"><i class="fab fa-twitter"></i> <span>an_drewmcc</span></a>
-						</div>
-					</div>
-					<div class="content">
-						<figure class="display">
-							<a href="https://mybinder.org/v2/gh/arm61/talks/master?filepath=pycon_sept2018/pylj_example.ipynb" target="_blank"><img src="./figures/pylj.png" alt="" width="100%"></a>
-						</figure>
-					</div>
-				</div>
-			</section>
-
-			<section class="color--grad-white past" id="" style="display: block;">
-				<div class="grid-wrapper">
-					<div class="header">
-						<div class="twitterblue">
-							<a href="https://twitter.com/an_drewmcc"><i class="fab fa-twitter"></i> <span>an_drewmcc</span></a>
-						</div>
-					</div>
-					<div class="content">
-						<h1>Try pylj out</h1>
-						<ul>
-							<li>Molecular dynamics - <a href="http://pythoninchemistry.org/pylj/md">pythoninchemistry.org/pylj/md</a></li>
-							<li>Monte Carlo - <a href="http://pythoninchemistry.org/pylj/mc">pythoninchemistry.org/pylj/mc</a></li>
-						</ul>
-					</div>
-				</div>
-			</section>
-		</section>
-
-		<section class="stack present" style="display: block;" data-previous-indexv="0">
-			<section class="color--grad-purple past" id="" style="display: block;" hidden="" aria-hidden="true">
 				<div class="grid-wrapper">
 					<div class="header">
 						<div class="twitterwhite">
@@ -510,12 +397,11 @@
 						</div>
 					</div>
 					<div class="content">
-						<h1><a href="http://pythoninchemistry.org">pythoninchemistry</a> webpages</h1>
-						<ul>
-							<li><a href="http://pythoninchemistry.org/tag/basics/">Blogs</a> on basic python skills</li>
-							<li><a href="http://pythoninchemistry.org/tag/applications/">Applications</a> of python in chemical research and teaching</li>
-							<li>An <a href="http://pythoninchemistry.org/about/">information portal</a> for all aspects of the project</li>
-						</ul>
+						<h1>Random numbers w/ EM</h1>
+						<figure class="display">
+							<img src="./figures/fitoog_randem.png" alt="sadie baby" width="90%"><br>
+							<i>acceptance probability 0.18 %</i>
+						</figure>
 					</div>
 				</div>
 			</section>
@@ -523,14 +409,49 @@
 			<section class="color--grad-white past" id="" style="display: block;">
 				<div class="grid-wrapper">
 					<div class="header">
-						<div class="twitterblue">
+						<div class="twitterwhite">
+							<a href="https://twitter.com/an_drewmcc"><i class="fab fa-twitter"></i> <span>an_drewmcc</span></a>
+						</div>
+					</div>
+					<div class="content">
+						<h1>Particle swarm w/ EM</h1>
+						<figure class="display">
+							<img src="./figures/fitoog.png" alt="sadie baby" width="90%"><br>
+							<i>acceptance probability 0.26 %</i>
+
+						</figure>
+					</div>
+				</div>
+			</section>
+
+			<section class="color--grad-white past" id="" style="display: block;">
+				<div class="grid-wrapper">
+					<div class="header">
+						<div class="twitterwhite">
 							<a href="https://twitter.com/an_drewmcc"><i class="fab fa-twitter"></i> <span>an_drewmcc</span></a>
 						</div>
 					</div>
 					<div class="content">
 						<figure class="display">
-							<a href="http://pythoninchemistry.org"><img src="./figures/002-72.png" alt="" width="100%"></a>
+							<img src="./figures/not_a_micelle.png" alt="sadie baby" width="75%"><br>
+							<i>not very micellar</i>
 						</figure>
+					</div>
+				</div>
+			</section>
+
+			<section class="color--grad-white past" id="" style="display: block;">
+				<div class="grid-wrapper">
+					<div class="header">
+						<div class="twitterwhite">
+							<a href="https://twitter.com/an_drewmcc"><i class="fab fa-twitter"></i> <span>an_drewmcc</span></a>
+						</div>
+					</div>
+					<div class="content">
+						<figure class="display">
+							<img src="https://media.giphy.com/media/9Y5BbDSkSTiY8/giphy.gif" alt="sadie baby" width="100%">
+						</figure>
+
 					</div>
 				</div>
 			</section>
@@ -538,7 +459,29 @@
 
 		<!-- Acknowledgements -->
 		<section class="stack present" style="display: block;" data-previous-indexv="0">
-			<section class="color--grad-green past" id="acknoledgements" hidden="" aria-hidden="true" style="display: block;">
+			<section class="color--grad-green past" hidden="" aria-hidden="true" style="display: block;">
+				<div class="grid-wrapper">
+					<div class="header">
+						<div class="twitterwhite">
+							<a href="https://twitter.com/an_drewmcc"><i class="fab fa-twitter"></i> <span>an_drewmcc</span></a>
+						</div>
+					</div>
+					<div class="content">
+						<h1>conclusions</h1>
+						<ul>
+							<li>fitoog looks like a very efficient, pretty pointless code</li>
+							<li>we will test other algorithms, genetic</li>
+							<li>maybe try and optimise the particle swarm</li>
+							<li>can be used to produce test data for ML algorithms</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+		</section>
+
+		<!-- Acknowledgements -->
+		<section class="stack present" style="display: block;" data-previous-indexv="0">
+			<section class="color--grad-purple past" id="acknoledgements" hidden="" aria-hidden="true" style="display: block;">
 				<div class="grid-wrapper">
 					<div class="header">
 						<div class="twitterwhite">
@@ -548,30 +491,13 @@
 					<div class="content">
 						<h1>acknowledgements</h1>
 						<ul>
-							<li><a href="http://www.analysisandsynthesis.com/">Benjamin J. Morgan</a></li>
-							<li><a href="https://researchportal.bath.ac.uk/en/persons/fiona-dickinson/">Fiona Dickinson</a></li>
-							<li><a href="https://researchportal.bath.ac.uk/en/persons/ian-thompson">Ian Thompson</a></li>
 							<li><a href="http://people.bath.ac.uk/rjg20/">James Grant</a></li>
 							<li><a href="http://people.bath.ac.uk/chske/">Karen J. Edler</a></li>
 							<li><a href="http://people.bath.ac.uk/chsscp/">Stephen C. Parker</a></li>
-							<li><a href="https://2018.pyconuk.org/">PYCON UK</a></li>
-							<li><a href="https://bitsandchips.me">Tania Allard</a></li>
+							<li><a href="https://www.diamond.ac.uk/Instruments/Soft-Condensed-Matter/small-angle/I22/Staff/Andy-Smith.html">Andrew J. Smith</a></li>
+							<li><a href="https://www.diamond.ac.uk/Instruments/Structures-and-Surfaces/I07/Staff/Rawle.html">Jonathan L. Rawle</a></li>
+							<li><a href="https://scarf.rl.ac.uk">SCARF cluster</a></li>
 						</ul>
-					</div>
-				</div>
-			</section>
-
-			<section class="color--grad-white past" id="" style="display: block;">
-				<div class="grid-wrapper">
-					<div class="header">
-						<div class="twitterwhite">
-								<a href="https://twitter.com/an_drewmcc"><i class="fab fa-twitter"></i> <span>an_drewmcc</span></a>
-						</div>
-					</div>
-					<div class="content">
-						<figure class="display">
-							<img src="./figures/thanks.gif" alt="sadie baby" width="100%">
-						</figure>
 					</div>
 				</div>
 			</section>
