@@ -517,6 +517,7 @@ html {
   height: 100%;
   padding: 5vmin; }
 
+
 .reveal .slides section .header {
   align-items: center;
   display: flex;
@@ -527,9 +528,9 @@ html {
   background-size: auto 100%;
   display: inline-block;
   grid-area: header;
-  height: 3.5vmin;
-  margin-right: 10.5vmin;
-  width: 11.5vmin; }
+  height: 9vmin;
+  margin-right: 1.5vmin;
+  width: 14vmin; }
 
 .reveal .slides section .section {
   text-transform: uppercase;
@@ -588,18 +589,18 @@ html {
     width: calc(100vw - 4vmin); } }
 .reveal .slides section.title .grid-wrapper {
   grid-template-areas: "header header" "content content" ". credit";
-  grid-template-columns: auto 55%;
+  grid-template-columns: auto 70%;
   grid-template-rows: 6vmin 1fr auto;
   grid-column-gap: 10vmin; }
 
 .reveal .slides section.title .logo {
-  background-image: url("../figures/2401.gif");
-  height: 6vmin;
-  width: 30vmin; }
+  background-image: url("../figures/logos.png");
+  height: 13vmin;
+  width: 40vmin; }
 
 .reveal .slides section.title .logo--full {
-  background-image: url("../figures/2401.gif");
-  width: 24vmin; }
+  background-image: url("../figures/logos.png");
+  width: 40vmin; }
 
 .reveal .slides section.title .content {
   align-self: center;
